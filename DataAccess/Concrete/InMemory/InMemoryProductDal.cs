@@ -15,7 +15,7 @@ namespace DataAccess.Concrete.InMemory
         List<Product> _products;
         public InMemoryProductDal()
         {
-            // simulating a simple database for testin operations
+            // simulating a simple database for testing operations
             _products = new List<Product> {
                 new Product{ProductId=1, CategoryId=1, ProductName="Cup", UnitPrice=15, UnitsInStock =15 },
                 new Product{ProductId=1, CategoryId=2, ProductName="Camera", UnitPrice=500, UnitsInStock =3 },
@@ -72,8 +72,9 @@ namespace DataAccess.Concrete.InMemory
         public void Update(Product product)
         {
             Product productToUpdate = null;
-            // find the product
+            // find the product:
             productToUpdate = _products.SingleOrDefault(p => p.ProductId == product.ProductId);
+            // update:
             productToUpdate.ProductName = product.ProductName;
             productToUpdate.CategoryId = product.CategoryId;
             productToUpdate.UnitPrice = product.UnitPrice;

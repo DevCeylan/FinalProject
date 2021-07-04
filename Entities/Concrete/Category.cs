@@ -10,5 +10,6 @@ namespace Entities.Concrete
     {
         public int CategoryId { get; set; }
         public string CategoryName { get; set; }
+
     }
 }
